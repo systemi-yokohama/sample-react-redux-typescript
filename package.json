@@ -1,0 +1,47 @@
+{
+  "name": "sample-react-redux-typescript",
+  "version": "0.1.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systemi-yokohama/sample-react-redux-typescript.git"
+  },
+  "engines": {
+    "node": "^14.9",
+    "yarn": "^1.22.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.2.5",
+    "@testing-library/dom": "^7.24.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.0",
+    "typescript": "~3.8.2"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.1.6"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ]
+}

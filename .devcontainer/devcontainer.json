@@ -1,0 +1,80 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/typescript-node
+{
+	"name": "sample-react-redux-typescript",
+
+  // The order of the files is important since later files override previous ones
+	"dockerComposeFile": [
+    "docker-compose.yml",
+    "docker-compose.extend.yml"
+	],
+
+  "service": "node",
+
+  "workspaceFolder": "/workspace",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.cwd": "${containerWorkspaceFolder}",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false,
+      "source.fixAll.stylelint": false
+    },
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.ignoreRecommendations": true,
+    "code-eol.highlightNonDefault": true,
+    "code-eol.highlightExtraWhitespace": true,
+    "workbench.tree.renderIndentGuides": "always",
+    "eslint.nodePath": "/usr/local/share/npm-global/lib/node_modules/eslint",
+    "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "eslint.packageManager": "yarn",
+    "eslint.onIgnoredFiles": "warn",
+    "eslint.format.enable": true,
+    "eslint.codeActionsOnSave.mode": "problems",
+    "eslint.run": "onType",
+    "npm.autoDetect": "on",
+    "npm.enableRunFromFolder": true,
+    "npm.fetchOnlinePackageInfo": true,
+    "npm.packageManager": "yarn",
+    "npm.runSilent": false,
+    "npm.scriptExplorerAction": "open",
+    "vsintellicode.features.python.deepLearning": "disabled",
+    "vsintellicode.java.completionsEnabled": false,
+    "vsintellicode.modify.editor.suggestSelection": "enabled",
+    "vsintellicode.python.completionsEnabled": false,
+    "vsintellicode.sql.completionsEnabled": false,
+    "vsintellicode.typescript.completionsEnabled": true
+  },
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
+		"editorconfig.editorconfig",
+		"medo64.render-crlf",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"msjsdiag.debugger-for-chrome",
+		"dsznajder.es7-react-js-snippets"
+	],
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "node"
+
+  // The commands execute from the workspaceFolder in the container.
+  "postStartCommand": [
+    "sh",
+    ".devcontainer/post_start.sh",
+    "${containerWorkspaceFolder}"
+  ],
+
+  // Indicates whether VS Code should stop the containers when the VS Code window is closed / shut down.
+  "shutdownAction": "stopCompose"
+}

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  node:
+    volumes:
+      - vscode-extensions:/root/.vscode-server/extensions
+volumes:
+  vscode-extensions:
